@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+
+<form action="" method="POST" >
+    {% csrf_token %}
+    {% for i in form %}
+    {{ i.label }}
+    {{ i }}
+    <br>
+    {{ i.errors }}
+    <br>
+    {% endfor %}
+    <input type="submit" value="Log In">
+</form>
+
+
+
+
+
+{% endblock %}

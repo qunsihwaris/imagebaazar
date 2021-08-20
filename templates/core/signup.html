@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+
+
+{% block content %}
+
+
+<form action="" method="POST" >
+    {% csrf_token %}
+{% for i in form %}
+{{ i.label }}
+{{ i }}
+<br>
+{{ i.errors }}
+<br>
+{% endfor %}
+<input type="submit" value="Submit">
+</form>
+<br>
+
+{% if messages %}
+{% for a in messages %}
+{{ a }}
+{% endfor %}
+{% endif %}
+
+<br>
+
+
+
+
+<a class="btn btn-primary" href="{% url 'signin_page' %}" >Log In</a>
+
+
+
+
+
+
+
+{% endblock %}

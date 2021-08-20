@@ -1,0 +1,29 @@
+{% extends 'deshboard/welcome.html' %}
+
+
+{% block content %}
+
+
+
+<div class="row">{% for a in posts %}
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img src="/media/{{ a.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ a.title }}</h5>
+            <h4 class="card-title" >{{  a.category }}</h4>
+            <p class="card-subtitle">{{ a.date_created }}</p>
+            
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+
+  {% endfor %}</div>
+
+
+
+
+
+
+{% endblock %}

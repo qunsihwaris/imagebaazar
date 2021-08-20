@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% block content %}
+
+
+<div class="row">{% for a in post %}
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img src="/media/{{ a.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h3 class="card-title">Title: {{ a.title }}</h5>
+                <hr>
+            <h5 class="card-subtitle" >Category: {{  a.category }}</h4>
+           
+            <h5 class='card-subtitle' >UserName: {{ a.user.username }}</h3>
+                <p class="card-subtitle">Date: {{ a.date_created }}</p>
+                <hr>
+            <div class="container">
+                <div class="d-flex">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <a href="" class="btn btn-primary">View</a></div>
+                        <div class="col-sm-6"><a href="" class="btn btn-primary">Save</a></div>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+  {% endfor %}</div>
+
+{% endblock %}
